@@ -1,0 +1,72 @@
+
+//- section
+mixin section-convenient()
+  section.section-convenient.section#section-convenient
+
+    //- 背景插圖
+    .section-convenient--bg-left
+      .section-convenient--bg-left__pic.section-convenient--bg-left_1
+        img(src='images/reuse/pink-leaves-sm.svg' alt='leaf')
+      .section-convenient--bg-left__pic.section-convenient--bg-left_2
+        img(src='images/reuse/brown-leaves.svg' alt='leaf')
+    .section-convenient--bg-right
+      .section-convenient--bg-right__pic.section-convenient--bg-right_1
+        img(src='images/reuse/green-leaves.svg' alt='leaf')
+      .section-convenient--bg-right__pic.section-convenient--bg-right_2
+        img(src='images/reuse/yellow-flower.svg' alt='leaf')
+
+    //- 最大寬度1300
+    .wrap__inner
+      h2.section-title(data-aos='fade-up' data-aos-duration='1200')
+        img(src='images/title-convenient.svg' alt='網銀會員好方便')
+        img.leaf-yellow(src='images/title-leaf-yellow.svg' alt='leaf')
+        img.leaf-red(src='images/title-leaf-red.svg' alt='leaf')
+
+      //- 預設文字是Noto Sans
+      .section-subtitle.center(data-aos='fade-up' data-aos-duration='1400') 手機能做到的事，何必出門辦理
+
+      .section-convenient--box(data-aos='fade-up' data-aos-duration='1600')
+        .section-convenient--card
+          .center
+            .section-convenient--card__title.noto-700 轉帳
+            .section-convenient--card__img
+              img(src='images/convenient-transfer.svg' alt='轉帳')
+            .section-convenient--card__info 免跑臨櫃、ATM，預約轉、即時轉，轉帳的事交由手機搞定
+
+        .section-convenient--card
+          .center
+            .section-convenient--card__title.noto-700 無卡提款
+            .section-convenient--card__img
+              img(src='images/convenient-cardless.svg' alt='無卡提款')
+            .section-convenient--card__info 不想帶金融卡/忘記帶金融卡
+              |
+              br
+              | 提款的事交由手機搞定
+
+        .section-convenient--card
+          .center
+            .section-convenient--card__title.noto-700 繳費
+            .section-convenient--card__img
+              img(src='images/convenient-pay.svg' alt='繳費')
+            .section-convenient--card__info 免跑超商、ATM
+              |
+              br
+              | 繳費的事交由手機搞定
+
+        .section-convenient--card
+          .center
+            .section-convenient--card__title.noto-700 外幣買賣
+            .section-convenient--card__img
+              img(src='images/convenient-foreignCurrency.svg' alt='外幣買賣')
+            .section-convenient--card__info 隨時換匯，輕鬆便利
+              |
+              br
+              | 換匯的事交由手機搞定
+
+
+        //- .section-convenient--transfer
+        //- .section-convenient--cardless
+        //- .section-convenient--pay
+        //- .section-convenient--foreignCurrency
+
+

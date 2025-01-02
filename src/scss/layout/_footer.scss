@@ -1,0 +1,128 @@
+.footer {
+  width: 100%;
+  background-color: #234481;
+  letter-spacing: 0.03em;
+  line-height: 3;
+  color: #fff;
+  font-size: 15px;
+  line-height: px-em(24, 16);
+  text-align: center;
+  margin: 0 auto;
+
+  @include breakpoint(sm) {
+    padding: 0;
+  }
+
+  span {
+    @include breakpoint(sm) {
+      display: block;
+    }
+  }
+
+  &-link {
+    text-decoration: underline;
+    margin-left: 10px;
+  }
+
+  &-content {
+    padding: 20px 0 22px 0;
+
+    @include breakpoint(sm) {
+      padding: vwm(40px);
+      font-size: vwm(30px);
+      line-height: 1.5;
+    }
+  }
+}
+
+// 浮動按鈕
+.fixedIcon {
+  &-box {
+    // display: none;
+    width: 230px;
+    background: #fff;
+    border: 2px solid #3c1f11;
+    border-radius: 30px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 10%;
+    right: 1.6%;
+    // right: 7.6%;
+    // right: clamp(24px, 7.6vw, 10%);
+    transition: transform 0.2s;
+    z-index: 10;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include breakpoint(xl) {
+      width: vw(230px);
+      border-radius: vw(30px);
+      // right: clamp(#{vw(24px)}, #{vw(7.6vw)}, 10%);
+    }
+
+    @include breakpoint(sm) {
+      border-radius: 0;
+      position: relative;
+      right: 0;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+
+  &-head {
+    font-size: 28px;
+    color: #f7d66f;
+    line-height: 1.25;
+    padding: 22px 13px 22px 0;
+    background: #3c1f11;
+
+    @include breakpoint(xl) {
+      font-size: vw(28px);
+      padding: vw(22px) vw(13px) vw(22px) 0;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    font-size: 24px;
+    color: $color-brown-dark;
+    line-height: 1.45;
+    padding: 16px 0;
+
+    @include breakpoint(xl) {
+      font-size: vw(24px);
+      padding: vw(16px) 0;
+    }
+
+    @include breakpoint(sm) {
+      padding: vwm(48px) 0;
+      line-height: 1.67;
+      font-size: vwm(49.15px);
+    }
+
+    &:hover {
+      color: #b99e79;
+    }
+
+    span {
+      @include flex-center;
+
+      @include breakpoint(sm) {
+        display: inline;
+      }
+    }
+  }
+
+  &-member {
+    border-top: 2px solid #3c1f11;
+  }
+}

@@ -1,0 +1,310 @@
+.section-download {
+  // web-1920
+  // background: #f0d0b1;
+  margin-top: -105px;
+  padding-bottom: 90px;
+  position: relative;
+  overflow: hidden;
+  background: #f0d0b1 url("../images/download-bg.svg") no-repeat;
+  background-size: 1920px auto;
+  background-position: top center;
+
+  @media (min-width: 1920px) {
+    background-size: 100% auto;
+  }
+
+  @include breakpoint(xl) {
+    background-size: vw(1920px) auto;
+    margin-top: vw(-105px);
+  }
+
+  @include breakpoint(sm) {
+    background: url("../images/download-bg1.svg") no-repeat;
+    background-size: 100% auto;
+    padding-bottom: 0;
+    margin-top: vwm(-43px);
+  }
+
+  //- 裝飾-左
+  &--bg-left {
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    &__pic {
+      position: absolute;
+      &:nth-child(1) {
+        width: px-em(256);
+        left: calc(50% - 992px);
+        top: 203px;
+
+        @media (max-width: 1440px) {
+          width: vw(200px);
+          left: calc(50% - #{vw(792px)});
+          top: vw(200px);
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(231);
+        left: calc(50% - 1030px);
+        top: 480px;
+
+        @media (max-width: 1440px) {
+          width: vw(180px);
+          left: calc(50% - #{vw(800px)});
+          top: vw(400px);
+        }
+      }
+      &:nth-child(3) {
+        width: px-em(727);
+        left: calc(50% - 993px);
+        bottom: -20px;
+
+        @media (max-width: 1440px) {
+          width: vw(580px);
+          left: calc(50% - #{vw(723px)});
+        }
+      }
+      &:nth-child(4) {
+        width: px-em(165);
+        left: calc(50% - 762px);
+        bottom: -45px;
+        z-index: 2;
+
+        @media (max-width: 1440px) {
+          width: vw(115px);
+          left: calc(50% - #{vw(502px)});
+          bottom: vw(-20px);
+        }
+      }
+      &:nth-child(5) {
+        width: px-em(235);
+        left: calc(50% - 1010px);
+        top: 636px;
+        transform: rotate(80deg);
+
+        @media (max-width: 1440px) {
+          width: vw(195px);
+          left: calc(50% - #{vw(810px)});
+          top: vw(556px);
+        }
+      }
+    }
+  }
+  //- 裝飾-右
+  &--bg-right {
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    &__pic {
+      position: absolute;
+      &:nth-child(1) {
+        width: px-em(260);
+        right: calc(50% - 1014px);
+        top: 205px;
+        z-index: 2;
+
+        @media (max-width: 1440px) {
+          width: vw(210px);
+          right: calc(50% - #{vw(814px)});
+          top: vw(155px);
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(144);
+        right: calc(50% - 973px);
+        top: 538px;
+        z-index: 1;
+
+        @media (max-width: 1440px) {
+          width: vw(94px);
+          right: calc(50% - #{vw(723px)});
+          top: vw(358px);
+        }
+      }
+      &:nth-child(3) {
+        width: px-em(270);
+        right: calc(50% - 1043px);
+        top: 725px;
+        z-index: 1;
+
+        @media (max-width: 1440px) {
+          width: vw(220px);
+          right: calc(50% - #{vw(823px)});
+          top: vw(520px);
+        }
+      }
+      &:nth-child(4) {
+        width: px-em(697);
+        right: calc(50% - 1127px);
+        bottom: -140px;
+
+        @media (max-width: 1440px) {
+          width: vw(600px);
+          right: calc(50% - #{vw(927px)});
+          bottom: vw(-120px);
+        }
+      }
+    }
+  }
+
+  .wrap__inner {
+    margin-top: 80px;
+
+    @include breakpoint(xl) {
+      margin-top: vw(80px);
+    }
+
+    @include breakpoint(sm) {
+      margin-top: vwm(43px);
+      padding-bottom: vwm(90px);
+      background: #f0d0b1;
+    }
+  }
+
+  &--box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 57px auto 0;
+
+    @include breakpoint(xl) {
+      max-width: vw(1200px);
+      margin: vw(57px) auto 0;
+    }
+
+    @include breakpoint(sm) {
+      display: block;
+      margin-top: vwm(133px);
+    }
+  }
+
+  &--card {
+    border: 2px solid #3c1f11;
+    border-radius: 60px;
+    padding: 35px 67px 68px 67px;
+    background: #fff;
+
+    @include breakpoint(xl) {
+      padding: vw(35px) vw(67px) vw(68px) vw(67px);
+      border-radius: vw(60px);
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      padding: vwm(78px) vwm(82px) vwm(187px) vwm(82px);
+      border-width: vwm(4.1px);
+      border-radius: vwm(61.5px);
+      margin-top: vwm(79.5px);
+    }
+
+    @include breakpoint(xs) {
+      border-width: 2px;
+    }
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
+
+    &:last-child {
+      margin: 40px auto 0;
+
+      @include breakpoint(xl) {
+        margin: vw(40px) auto 0;
+      }
+
+      @include breakpoint(sm) {
+        margin-top: vwm(79.5px);
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 1.8;
+      color: #020202;
+      text-align: center;
+
+      @include breakpoint(xl) {
+        font-size: vw(24px);
+      }
+
+      @include breakpoint(sm) {
+        font-size: vwm(49.15px);
+      }
+    }
+
+    &__link {
+      display: flex;
+      margin: 0 auto;
+      @include flex-center;
+      margin-top: 17px;
+
+      @include breakpoint(xl) {
+        margin-top: vw(17px);
+      }
+
+      @include breakpoint(sm) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: vwm(33px);
+      }
+    }
+
+    &__qrcode {
+      @include size(166px);
+
+      @include breakpoint(xl) {
+        @include size(#{vw(166px)});
+      }
+
+      @include breakpoint(sm) {
+        @include size(#{vwm(340px)});
+      }
+    }
+
+    &__app {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(xl) {
+        width: vw(227px);
+        margin-left: vw(20px);
+      }
+
+      @include breakpoint(sm) {
+        margin: 0;
+        width: vwm(465px);
+      }
+    }
+
+    &__android {
+      @include breakpoint(sm) {
+        margin-top: vwm(41px);
+      }
+    }
+
+    &__ios {
+      margin-top: 21px;
+
+      @include breakpoint(xl) {
+        margin-top: vw(21px);
+      }
+
+      @include breakpoint(sm) {
+        margin-top: vwm(45px);
+      }
+    }
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {
+  }
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {
+  }
+  // 小網-768
+  @include breakpoint(sm) {
+  }
+}

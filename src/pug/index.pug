@@ -1,0 +1,23 @@
+extends _layout.pug
+
+append vars
+
+block content
+  main.index
+    //- KV
+    +section-kv()
+    //- 活動登錄
+    +section-login()
+    //- 活動任務
+    +section-mission()
+    //- 網銀好方便
+    +section-convenient()
+    //- 立即下載
+    +section-download()
+    //- 常見問題
+    +section-faq()
+    //- 活動辦法
+    +section-way()
+
+append lightbox
+  include component/_lightbox.pug

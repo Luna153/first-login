@@ -1,0 +1,54 @@
+//- section
+mixin section-login()
+  section.section.section-login#section-login
+    .wrap__inner
+      form#apply-form.section-login--form(data-aos='fade-up' data-aos-duration='1200')
+        .section-login--form__title
+          h2 首登永豐網銀會員並於下方活動登錄，
+            br.br
+            |後在永豐數位通路首登成功
+            br.br
+            |就有機會獲得
+            span 最高300元回饋金
+        .section-login--form__content
+          .section-login--form__content-input
+            input(type='text' id='target' maxlength='10' placeholder='請輸入身分證字號')
+            label(for='target')
+            //- .section-login--form__content--type
+            input(type='text' id='name' maxlength='10' placeholder='姓名')
+            label(for='name')
+            .section-login--form__content-input-verify
+              input#captcha-val.input-code(type='text' placeholder='請輸入驗證碼')
+              .verification-code#update-captcha
+                img#captcha-img(src='https://mma.sinopac.com/EventSiteApi/CaptchaImage.ashx' alt='更新驗證碼')
+                //- img#captcha-img(src='http://10.11.36.36/EventSiteApi/CaptchaImage.ashx' alt='更新驗證碼')
+              img#captcha-again.again(src='images/login-again.svg' alt='更新驗證碼')
+          .section-login--form__content-check
+            input#notice-content(type='checkbox' name='notice-content' value='comfirm-notice')
+            label(for='notice-content') 本人已閱讀注意事項，本資料作為活動登錄使用。
+          .section-login--form__content-note
+            p ※為辦理本活動之需要，於你按下「活動登錄」時，你同意將填寫資料提供予永豐銀行。永豐銀行將保護你個人資料安全，且於法令許可及特定目的範圍內，蒐集、處理、利用你的個人資料。若你已詳閱了解「永豐銀行履行個人資料保護法告知義務內容」並同意本行蒐集、處理或利用你的個人資料，請按「
+              span 活動登錄
+              |」。
+          .section-login--form__content-btnWrap
+            button#sendReq.flex-center(type='submit' value='活動登錄')
+              p 活動登錄
+              .button-arrow
+
+    .section-login--pattern-left
+      .section-login--pattern-left__pic.yellow-flower
+        img(src='images/reuse/yellow-flower.svg' alt='')
+      .section-login--pattern-left__pic.green-leaves
+        img(src='images/reuse/green-leaves.svg' alt='')
+      .section-login--pattern-left__pic.pink-leaves-lg
+        img(src='images/reuse/pink-leaves-lg.svg' alt='')
+
+    .section-login--pattern-right
+      .section-login--pattern-right__pic.brown-flower
+        img(src='images/reuse/brown-flower.svg' alt='')
+      .section-login--pattern-right__pic.pink-leaves-md
+        img(src='images/reuse/pink-leaves-md.svg' alt='')
+      .section-login--pattern-right__pic.brown-leaves
+        img(src='images/reuse/brown-leaves.svg' alt='')
+      .section-login--pattern-right__pic.login-orangeLeaves
+        img(src='images/login-orangeLeaves.svg' alt='')

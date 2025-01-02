@@ -1,0 +1,162 @@
+.section-login--form {
+  max-width: 900px;
+  background-color: white;
+  border-radius: 20px;
+  border: 4px #3d1f11 solid;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  position: relative;
+  z-index: 1; }
+  .section-login--form-direction {
+    position: relative;
+    max-width: 567px;
+    margin: auto;
+    padding-top: 16px;
+    padding-bottom: 40px; }
+    .section-login--form-direction__title {
+      font-size: 46px;
+      line-height: 1.2;
+      letter-spacing: 3.2px;
+      width: 100%;
+      background-color: blue;
+      padding: 10px 0;
+      color: white;
+      position: relative; }
+      .section-login--form-direction__title::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 41%;
+        right: 47px; }
+      .section-login--form-direction__title::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 41%;
+        left: 48px; }
+    .section-login--form-direction::before {
+      content: "";
+      height: 82px;
+      width: 2px;
+      background-color: #12465d;
+      position: absolute;
+      top: -23%;
+      right: 52px;
+      z-index: 1; }
+    .section-login--form-direction::after {
+      content: "";
+      height: 82px;
+      width: 2px;
+      background-color: #12465d;
+      position: absolute;
+      top: -23%;
+      left: 54px; }
+    .section-login--form-direction .triangle-left {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 38px 0 36px 28px;
+      border-color: transparent transparent transparent #ffffff;
+      position: absolute;
+      top: 0;
+      left: -1px; }
+    .section-login--form-direction .triangle-right {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 38px 28px 38px 0;
+      border-color: transparent #ffffff transparent transparent;
+      position: absolute;
+      top: 0;
+      right: -1px; }
+  .section-login--form-text {
+    width: 377px;
+    margin: auto; }
+    .section-login--form-text input {
+      width: 100%;
+      height: 52px;
+      margin-top: 7px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      font-size: 24px;
+      padding-left: 12px; }
+    .section-login--form-text-verify {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: auto;
+      width: 100%; }
+      .section-login--form-text-verify input {
+        width: 55%;
+        margin: 10px 0;
+        padding-left: 10px;
+        text-align: left; }
+      .section-login--form-text-verify .verification-code {
+        padding-left: 15px;
+        cursor: pointer;
+        width: 45%; }
+  .section-login--form-check {
+    width: 567px;
+    margin: auto;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-bottom: 16px; }
+    .section-login--form-check input[type="checkbox"] {
+      min-width: 16px;
+      height: 16px;
+      border-radius: 0;
+      margin: 4px 0; }
+    .section-login--form-check label {
+      margin-left: 8px; }
+      .section-login--form-check label .link-text {
+        color: #0027e8;
+        text-decoration: underline;
+        -webkit-tap-highlight-color: transparent; }
+  .section-login--form-btn-wrap {
+    width: 250px;
+    margin-top: 15px;
+    margin: auto;
+    padding-top: 25px; }
+    .section-login--form-btn-wrap button {
+      width: 100%;
+      font-size: 40px;
+      color: white;
+      background-color: #db4b4b;
+      border-radius: 30px;
+      padding: 12px 34px;
+      border: none;
+      position: relative;
+      cursor: pointer;
+      text-align: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      line-height: 1; }
+      .section-login--form-btn-wrap button img {
+        position: absolute;
+        width: 16px;
+        right: 26px;
+        -webkit-animation: slideInOutX 1s infinite;
+        animation: slideInOutX 1s infinite; }

@@ -1,0 +1,171 @@
+.lightbox {
+  @include flex-center;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(17, 17, 17, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s $cubic;
+  z-index: $z-lightbox;
+  visibility: hidden;
+  font-family: "Noto Sans TC", sans-serif;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  &__content {
+    height: 100vh;
+    @include breakpoint(sm) {
+    }
+  }
+
+  &__box {
+    position: relative;
+    max-width: 600px;
+    transition: transform 0.2s ease-out;
+    background: $white;
+    // padding: 20px 40px;
+    padding: 20px 28px 20px 40px;
+    border-radius: 60px;
+    height: 53vh;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include breakpoint(sm) {
+      max-height: 80vh;
+      padding: vwm(20px) vwm(28px) vwm(20px) vwm(40px);
+      border-radius: vwm(40px);
+    }
+  }
+
+  &__btn-close {
+    background: url("../images/icon-close.svg") no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 45px;
+    @include size(24px);
+    z-index: 1;
+
+    @include breakpoint(sm) {
+      @include size(#{vwm(30px)});
+      top: vwm(20px);
+      right: vwm(20px);
+    }
+
+    @include breakpoint(xs) {
+      @include size(20px);
+    }
+
+    &:hover {
+      opacity: 0.6;
+      scale: 1.2;
+      transition: 0.4s;
+    }
+  }
+
+  &__head {
+    color: $color-brown-dark;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+
+    @include breakpoint(sm) {
+      font-size: vwm(32px);
+      // padding: 0 65px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 0 34px;
+    }
+  }
+
+  &__body {
+    position: relative;
+    color: #323232;
+    background: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+    height: calc(100% - 68px);
+    overflow: auto;
+    // z-index: -1;
+
+    @include breakpoint(sm) {
+      font-size: vwm(30px);
+      margin-top: vwm(50px);
+      height: calc(100% - #{vwm(130px)});
+    }
+
+    &--wrap {
+      padding: 40px;
+
+      @include breakpoint(sm) {
+        padding: vwm(40px);
+      }
+
+      &::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        border-radius: 40px;
+        top: 68px;
+        bottom: 20px;
+        left: 40px;
+        right: 40px;
+        padding: 40px;
+        background: #f9f9fa;
+        // background: blueviolet;
+        // margin-right: 12px;
+        border-radius: 40px;
+        z-index: -1;
+
+        @include breakpoint(sm) {
+          padding: vwm(40px);
+          border-radius: vwm(40px);
+          top: vwm(110px);
+          bottom: vwm(20px);
+          left: vwm(40px);
+          right: vwm(40px);
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    // scrollbar軌道
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    // 滾動條
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background-color: #3c1f11;
+      // background-color: red;
+      // height: 98px;
+      // width: 4px;
+    }
+
+    .decimal {
+      margin-left: 20px;
+
+      @include breakpoint(xl) {
+        margin-left: vw(25px);
+      }
+
+      @include breakpoint(sm) {
+        margin-left: vwm(45px);
+      }
+    }
+  }
+}

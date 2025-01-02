@@ -1,0 +1,466 @@
+.section-kv {
+  // web-1920
+  padding: 0;
+  background-color: #dbe0d5;
+  position: relative;
+  height: 650px;
+  @include breakpoint(xl) {
+    height: vw(650px);
+  }
+  @include breakpoint(sm) {
+    height: vwm(1000px);
+  }
+
+  .kv-decorate {
+    &-right1 {
+      z-index: 1;
+    }
+  }
+
+  &--main {
+    width: 505px;
+    margin: auto;
+    padding-top: 48px;
+    position: relative;
+    z-index: 10;
+    @include breakpoint(xl) {
+      width: vw(505px);
+      padding-top: vw(48px);
+    }
+    @include breakpoint(sm) {
+      width: vwm(485.38px);
+      padding-top: vwm(157px);
+    }
+
+    &__caption {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-date {
+        width: 430px;
+        @include breakpoint(xl) {
+          width: vw(430px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(414px);
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        width: 438px;
+        padding-top: 21px;
+        @include breakpoint(xl) {
+          width: vw(438px);
+          padding-top: vw(21px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(420px);
+          padding-top: vwm(20px);
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      &-info {
+        width: 500px;
+        position: relative;
+        padding-top: 19px;
+        @include breakpoint(xl) {
+          width: vw(500px);
+          padding-top: vw(19px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(480px);
+          padding-top: vwm(18px);
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__person {
+      position: absolute;
+      z-index: 10;
+      &-man {
+        width: 312px;
+        bottom: -166px;
+        left: -273px;
+        @include breakpoint(xl) {
+          width: vw(312px);
+          bottom: vw(-166px);
+          left: vw(-273px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(307.2px);
+          bottom: vwm(-445px);
+          left: vwm(-50px);
+        }
+      }
+      &-woman {
+        width: 270px;
+        bottom: -166px;
+        right: -258px;
+        @include breakpoint(xl) {
+          width: vw(270px);
+          bottom: vw(-166px);
+          right: vw(-258px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(260px);
+          bottom: vwm(-450px);
+          right: vwm(-50px);
+        }
+      }
+    }
+  }
+
+  //- 大型裝飾-左
+  &--bg-left {
+    &__pic {
+      position: absolute;
+      &:nth-child(1) {
+        width: px-em(1933);
+        left: calc(50% + #{px-em(0 - (1920/2))});
+        top: px-em(-60);
+        z-index: 2;
+        @include breakpoint(xl) {
+          width: vw(1933px);
+          left: vw(-240px);
+          top: vw(-60px);
+        }
+        @include breakpoint(sm) {
+          width: 100%;
+          left: 0;
+          top: auto;
+          bottom: vwm(-70px);
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(895);
+        left: calc(50% + #{px-em(120 - (1920/2))});
+        top: px-em(470);
+        z-index: 1;
+        @include breakpoint(xl) {
+          width: vw(895px);
+          left: vw(-130px);
+          top: vw(470px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(1147px);
+          left: vwm(-610px);
+          bottom: vwm(50px);
+          top: auto;
+          z-index: 3;
+        }
+      }
+      &:nth-child(3) {
+        width: px-em(645);
+        left: calc(50% + #{px-em(-50 - (1920/2))});
+        bottom: px-em(-50);
+        z-index: 2;
+        @include breakpoint(xl) {
+          width: vw(645px);
+          left: vw(-300px);
+          bottom: vw(-50px);
+        }
+        @include breakpoint(sm) {
+          display: none;
+        }
+      }
+      &:nth-child(4) {
+        width: px-em(920);
+        left: calc(50% + #{px-em(-170 - (1920/2))});
+        top: px-em(-150);
+        z-index: 2;
+        @include breakpoint(xl) {
+          width: vw(920px);
+          left: vw(-420px);
+          top: vw(-150px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(1180px);
+          left: vwm(-940px);
+          top: vwm(-80px);
+        }
+      }
+      &:nth-child(5) {
+        width: px-em(155);
+        left: calc(50% + #{px-em(-30 - (1920/2))});
+        bottom: px-em(-100);
+        z-index: 2;
+        @include breakpoint(xl) {
+          display: none;
+        }
+      }
+    }
+  }
+  //- 大型裝飾-右
+  &--bg-right {
+    &__pic {
+      position: absolute;
+      &:nth-child(1) {
+        width: px-em(1202);
+        right: calc(50% + #{px-em(-30 - (1920/2))});
+        top: px-em(470);
+        z-index: 1;
+        @include breakpoint(xl) {
+          width: vw(1202px);
+          right: vw(-280px);
+          top: auto;
+          bottom: vw(30px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(1541.24px);
+          right: vwm(-900px);
+          bottom: vwm(50px);
+          top: auto;
+          z-index: 2;
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(634);
+        right: calc(50% + #{px-em(-50 - (1920/2))});
+        top: px-em(550);
+        z-index: 3;
+        @include breakpoint(xl) {
+          width: vw(634px);
+          right: vw(-300px);
+          top: vw(550px);
+        }
+        @include breakpoint(sm) {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        width: px-em(965);
+        right: calc(50% + #{px-em(-150 - (1920/2))});
+        bottom: px-em(-200);
+        z-index: 4;
+        @include breakpoint(xl) {
+          width: vw(965px);
+          right: vw(-400px);
+          top: vw(-200px);
+        }
+        @include breakpoint(sm) {
+          width: vwm(1143px);
+          right: vwm(-660px);
+          top: vwm(-60px);
+        }
+      }
+    }
+  }
+
+  &--pattern-left {
+    &__pic {
+      position: absolute;
+      z-index: 4;
+      @include breakpoint(sm) {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        width: px-em(59);
+        left: calc(50% + #{px-em(340 - (1920/2))});
+        top: px-em(0);
+        opacity: 0;
+        @include breakpoint(xl) {
+          width: vw(59px);
+          left: vw(90px);
+        }
+      }
+      &:nth-child(2) {
+        // animation: anim 5s infinite;
+        width: px-em(54);
+        left: calc(50% + #{px-em(500 - (1920/2))});
+        top: px-em(145);
+        @include breakpoint(xl) {
+          width: vw(54px);
+          left: vw(250px);
+          top: vw(145px);
+        }
+      }
+      &:nth-child(3) {
+        width: px-em(26);
+        left: calc(50% + #{px-em(350 - (1920/2))});
+        top: px-em(145);
+        @include breakpoint(xl) {
+          width: vw(26px);
+          left: vw(100px);
+          top: vw(145px);
+        }
+      }
+      &:nth-child(4) {
+        width: px-em(22);
+        left: calc(50% + #{px-em(430 - (1920/2))});
+        top: px-em(160);
+        @include breakpoint(xl) {
+          width: vw(22px);
+          left: vw(180px);
+          top: vw(160px);
+        }
+      }
+      &:nth-child(5) {
+        width: px-em(66);
+        left: calc(50% + #{px-em(280 - (1920/2))});
+        top: px-em(170);
+        @include breakpoint(xl) {
+          width: vw(66px);
+          left: vw(30px);
+          top: vw(170px);
+        }
+      }
+      &:nth-child(6) {
+        width: px-em(54);
+        left: calc(50% + #{px-em(370 - (1920/2))});
+        top: px-em(270);
+        @include breakpoint(xl) {
+          width: vw(54px);
+          left: vw(120px);
+          top: vw(270px);
+        }
+      }
+      &:nth-child(7) {
+        width: px-em(41);
+        left: calc(50% + #{px-em(130 - (1920/2))});
+        top: px-em(250);
+      }
+      &:nth-child(8) {
+        width: px-em(100);
+        left: calc(50% + #{px-em(235 - (1920/2))});
+        top: px-em(390);
+        @include breakpoint(xl) {
+          width: vw(100px);
+          left: vw(-20px);
+          top: vw(390px);
+        }
+      }
+    }
+  }
+
+  &--pattern-right {
+    &__pic {
+      position: absolute;
+      z-index: 4;
+      @include breakpoint(sm) {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        width: px-em(107);
+        right: calc(50% + #{px-em(520 - (1920/2))});
+        top: px-em(180);
+        // opacity: 0;
+        @include breakpoint(xl) {
+          width: vw(107px);
+          right: vw(270px);
+          top: vw(180px);
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(54);
+        right: calc(50% + #{px-em(480 - (1920/2))});
+        top: px-em(200);
+        @include breakpoint(xl) {
+          width: vw(54px);
+          right: vw(230px);
+          top: vw(200px);
+        }
+      }
+      &:nth-child(3) {
+        width: px-em(55);
+        right: calc(50% + #{px-em(400 - (1920/2))});
+        top: px-em(300);
+        // opacity: 0;
+        @include breakpoint(xl) {
+          width: vw(55px);
+          right: vw(150px);
+          top: vw(300px);
+        }
+      }
+      &:nth-child(4) {
+        width: px-em(43);
+        right: calc(50% + #{px-em(340 - (1920/2))});
+        top: px-em(380);
+        @include breakpoint(xl) {
+          width: vw(43px);
+          right: vw(90px);
+          top: vw(380px);
+        }
+      }
+      &:nth-child(5) {
+        width: px-em(38);
+        right: calc(50% + #{px-em(220 - (1920/2))});
+        top: px-em(350);
+        @include breakpoint(xl) {
+          width: vw(38px);
+          right: vw(-30px);
+          top: vw(350px);
+        }
+      }
+      &:nth-child(6) {
+        width: px-em(73);
+        right: calc(50% + #{px-em(170 - (1920/2))});
+        top: px-em(155);
+        @include breakpoint(xl) {
+          width: vw(73px);
+          top: vw(155px);
+        }
+      }
+      &:nth-child(7) {
+        width: px-em(31);
+        right: calc(50% + #{px-em(160 - (1920/2))});
+        top: px-em(250);
+        @include breakpoint(xl) {
+          width: vw(31px);
+          top: vw(250px);
+        }
+      }
+      &:nth-child(8) {
+        width: px-em(62);
+        right: calc(50% + #{px-em(-5 - (1920/2))});
+        top: px-em(270);
+        @include breakpoint(xl) {
+          width: vw(62px);
+          top: vw(270px);
+        }
+      }
+    }
+  }
+
+  &--scrollDown {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -90px;
+    z-index: 10;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    @include breakpoint(xl) {
+      bottom: vw(-90px);
+      font-size: vw(16px);
+    }
+    @include breakpoint(sm) {
+      font-size: vwm(32.8px);
+      bottom: vwm(-205px);
+    }
+    img {
+      width: 24px;
+      padding-top: 10px;
+      animation: slideInOutY 1s infinite;
+      @include breakpoint(xl) {
+        width: vw(24px);
+        padding-top: vw(10px);
+      }
+      @include breakpoint(sm) {
+        width: vwm(50px);
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3em;
+}
+// @supports (scrollbar-gutter: stable) {
+//   html {
+//     scrollbar-gutter: stable;
+//   }
+// }
+body {
+  height: 100%;
+}
+
+// 對照設計稿
+// ---------------------------------
+
+.noto-400 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.noto-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.noto-700 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.noto-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.decimal,
+.disc {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+}
+li .decimal,
+li .disc {
+  margin-bottom: 0;
+}
+
+.decimal > li {
+  list-style: decimal;
+}
+
+.none-list > li {
+  list-style: none;
+}
+
+.disc > li {
+  list-style: disc;
+}
+
+// 共用
+// ---------------------------------
+.section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include breakpoint(sm) {
+    padding-top: vwm(60px);
+    padding-bottom: vwm(35px);
+  }
+
+  &-title {
+    position: relative;
+    width: 333px;
+    left: 5px;
+    margin: 0 auto;
+
+    @include breakpoint(xl) {
+      width: vw(333px);
+      left: vw(5px);
+    }
+
+    @include breakpoint(sm) {
+      width: vwm(568.5px);
+    }
+
+    .leaf-yellow {
+      position: absolute;
+      width: 80px;
+      left: -21px;
+      top: 5px;
+
+      @include breakpoint(xl) {
+        width: vw(80px);
+        left: vw(-21px);
+        top: vw(5px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(142px);
+        left: vwm(-42px);
+      }
+    }
+
+    .leaf-red {
+      position: absolute;
+      width: 76px;
+      right: -12px;
+      top: -9px;
+
+      @include breakpoint(xl) {
+        width: vw(76px);
+        right: vw(-12px);
+        top: vw(-9px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(133px);
+        right: vwm(-23px);
+        top: vwm(-17px);
+      }
+    }
+  }
+
+  &-subtitle {
+    color: #212121;
+    line-height: 1.8;
+    font-size: 20px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 700;
+    margin-top: 12px;
+    text-align: center;
+
+    @include breakpoint(xl) {
+      font-size: vw(20px);
+    }
+
+    @include breakpoint(sm) {
+      font-size: vwm(40.96px);
+    }
+  }
+}
+
+// 以.section-way--box為例
+.btn-round {
+  background: $btn-round-fill;
+  color: #fff;
+  border-radius: 63px;
+  cursor: pointer;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+
+  @include flex-center;
+  // width: 100%;
+  flex: 1;
+  position: relative;
+
+  @include breakpoint(xl) {
+    border-radius: vw(63px);
+  }
+
+  @include breakpoint(sm) {
+    flex-direction: column;
+    border-radius: vwm(80px);
+  }
+
+  &::before {
+    content: "";
+    width: 101%;
+    height: 106%;
+    position: absolute;
+    top: -3%;
+    left: -0.5%;
+    border-radius: 63px;
+    background: linear-gradient(310deg, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.3) 55%);
+    pointer-events: none;
+    box-sizing: border-box;
+    z-index: -1;
+    @include breakpoint(md) {
+      border-radius: vw(63px);
+    }
+    @include breakpoint(sm) {
+      width: 102%;
+      left: -1%;
+      border-radius: vwm(129.02px);
+    }
+  }
+  &::after {
+    content: "";
+    // width: 99%;
+    // height: 96%;
+    width: 101%;
+    height: 106%;
+    position: absolute;
+    top: -3%;
+    left: -0.5%;
+    // top: 2%;
+    // left: 0.5%;
+    border-radius: 63px;
+    background: $btn-round-fill;
+    pointer-events: none;
+    box-sizing: border-box;
+    z-index: -2;
+    @include breakpoint(md) {
+      border-radius: vw(63px);
+    }
+    @include breakpoint(sm) {
+      width: 102%;
+      left: -1%;
+      border-radius: vwm(129.02px);
+    }
+  }
+
+  &:hover {
+    color: $btn-round-text;
+    .arrow {
+      background: url("../images/icon-arrow-Y.svg") no-repeat;
+      background-size: cover;
+    }
+  }
+
+  // 箭頭位置
+  .arrow {
+    // content: "";
+    @include size(24px);
+    background: url("../images/icon-arrow.svg") no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 24px;
+    animation: slideInOutX 1s infinite;
+
+    @include breakpoint(xl) {
+      @include size(#{vw(24px)});
+      right: vw(24px);
+    }
+
+    @include breakpoint(sm) {
+      @include size(#{vwm(49.15px)});
+      right: vwm(56px);
+    }
+  }
+}
+
+.a-link {
+  position: relative;
+  color: #055ec7;
+  border-bottom: 1px solid #055ec7;
+
+  &:hover {
+    opacity: 0.8;
+    transition: 0.2s;
+  }
+}

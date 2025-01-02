@@ -1,0 +1,96 @@
+.section-way {
+  // web-1920
+  background: #f0d0b1 url("../images/way-bg1.svg") no-repeat;
+  background-size: 1920px auto;
+  background-position: top center;
+  padding-bottom: 60px;
+
+  @media (min-width: 1920px) {
+    background-size: 100% auto;
+  }
+
+  @include breakpoint(sm) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .wrap__inner {
+    // background: #f0d0b1;
+
+    @include breakpoint(sm) {
+      margin-top: vwm(91px);
+      padding-bottom: vwm(80px);
+      background: #f0d0b1;
+    }
+  }
+
+  &--box {
+    display: flex;
+    max-width: 1169px;
+    margin: 54px auto 0;
+
+    @include breakpoint(xl) {
+      max-width: vw(1169px);
+      margin: vw(54px) auto 0;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      margin: vwm(90px) auto 0;
+      max-width: vwm(585px);
+    }
+  }
+
+  .btn-round {
+    font-size: 28px;
+    padding: 23.5px 0;
+
+    @include breakpoint(xl) {
+      font-size: vw(28px);
+      padding: vw(23.5px) 0;
+    }
+
+    @include breakpoint(sm) {
+      font-size: vwm(36.86px);
+      padding: vwm(25px) vwm(70px) vwm(25px) 0;
+      line-height: 1.55;
+    }
+
+    span {
+      &:last-child {
+        margin-right: 30px;
+
+        @include breakpoint(xl) {
+          margin-right: vw(30px);
+        }
+
+        @include breakpoint(sm) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-left: 83px;
+
+      @include breakpoint(xl) {
+        margin-left: vw(83px);
+      }
+
+      @include breakpoint(sm) {
+        margin-left: 0;
+        margin-top: vwm(55px);
+      }
+    }
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {
+  }
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {
+  }
+  // 小網-768
+  @include breakpoint(sm) {
+  }
+}

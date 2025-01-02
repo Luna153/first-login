@@ -1,0 +1,276 @@
+// 網銀好方便
+.section-convenient {
+  // web-1920
+  background: #f5e6d3 url("../images/convenient-bg.svg") no-repeat;
+  background-size: 1920px auto;
+  background-position: top center;
+  position: relative;
+  padding-bottom: 150px;
+
+  @media (min-width: 1920px) {
+    background-size: 100% auto;
+  }
+
+  @include breakpoint(xl) {
+    background-size: vw(1920px) auto;
+    padding-bottom: vw(150px);
+  }
+
+  @include breakpoint(sm) {
+    margin-top: vwm(-90px);
+    z-index: -1;
+  }
+
+  //- 裝飾-左
+  &--bg-left {
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    &__pic {
+      position: absolute;
+      &:nth-child(1) {
+        width: px-em(70);
+        left: calc(50% - 757px);
+        top: 263px;
+        z-index: 2;
+
+        @media (max-width: 1440px) {
+          width: vw(70px);
+          left: calc(50% - #{vw(607px)});
+          top: vw(353px);
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(220);
+        left: calc(50% - 992px);
+        top: 541px;
+        transform: rotate(96deg);
+        z-index: 1;
+
+        @media (max-width: 1440px) {
+          width: vw(220px);
+          left: calc(50% - #{vw(832px)});
+          top: vw(541px);
+        }
+      }
+    }
+
+    &_1 {
+      // animation: anim 3s alternate infinite linear;
+    }
+  }
+
+  //- 裝飾右
+  &--bg-right {
+    @include breakpoint(sm) {
+      display: none;
+    }
+
+    &__pic {
+      position: absolute;
+
+      &:nth-child(1) {
+        width: px-em(195);
+        right: calc(50% - 991px);
+        top: 389px;
+        transform: rotate(98deg);
+        z-index: 2;
+
+        @media (max-width: 1440px) {
+          width: vw(195px);
+          right: calc(50% - #{vw(791px)});
+          top: vw(389px);
+        }
+      }
+      &:nth-child(2) {
+        width: px-em(123);
+        right: calc(50% - 858px);
+        top: 639px;
+        z-index: 1;
+
+        @media (max-width: 1440px) {
+          width: vw(123px);
+          right: calc(50% - #{vw(758px)});
+          top: vw(693px);
+        }
+      }
+    }
+  }
+
+  .wrap__inner {
+    margin-top: 248px;
+
+    @include breakpoint(xl) {
+      margin-top: vw(248px);
+    }
+
+    @include breakpoint(sm) {
+      margin-top: vwm(186px);
+    }
+  }
+
+  .section-title {
+    width: 378px;
+
+    @include breakpoint(xl) {
+      width: vw(378px);
+    }
+
+    @include breakpoint(sm) {
+      width: vwm(570px);
+    }
+
+    .leaf-yellow {
+      left: -29px;
+
+      @include breakpoint(xl) {
+        left: vw(-29px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(123px);
+        left: vwm(-37px);
+        top: vwm(5px);
+      }
+    }
+
+    .leaf-red {
+      right: -18px;
+
+      @include breakpoint(xl) {
+        right: vw(-18px);
+      }
+      @include breakpoint(sm) {
+        width: vwm(115px);
+        right: vwm(-32px);
+        top: vwm(-21px);
+      }
+    }
+  }
+
+  .section-subtitle {
+    @include breakpoint(sm) {
+      margin-top: vwm(24px);
+    }
+  }
+
+  &--box {
+    display: flex;
+    padding: 60px 40px 37px 40px;
+    border: 2px solid #3c1f11;
+    border-radius: 60px;
+    margin: 43px auto 0;
+    max-width: 1200px;
+    justify-content: space-between;
+    background: #fff;
+
+    @include breakpoint(xl) {
+      padding: vw(60px) vw(40px) vw(37px) vw(40px);
+      border-radius: vw(60px);
+      margin: vw(43px) auto 0;
+      max-width: vw(1200px);
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      padding: vwm(73.73px) vwm(40.96px) vwm(37px) vwm(40.96px);
+      border-radius: vwm(61.44px);
+      margin-top: vwm(38.89px);
+    }
+  }
+
+  &--card {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 39px;
+
+    border-right: 1px solid #362001;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      border-right: none;
+      // padding-right: 0;
+      border-bottom: vwm(4.1px) solid $btn-round-fill;
+      padding: vwm(49px) 0;
+    }
+    @include breakpoint(xs) {
+      border-bottom: 2px solid $btn-round-fill;
+    }
+
+    &:first-child {
+      @include breakpoint(sm) {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      border: none;
+      padding-right: 0;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__title {
+      color: #7c5f38;
+      font-size: 18px;
+      line-height: 1.55;
+
+      @include breakpoint(xl) {
+        font-size: vw(18px);
+      }
+
+      @include breakpoint(sm) {
+        font-size: vwm(36.86px);
+      }
+    }
+
+    &__img {
+      @include size(100px);
+      margin-top: 24px;
+
+      @include breakpoint(xl) {
+        @include size(#{vw(100px)});
+        margin-top: vw(24px);
+      }
+
+      @include breakpoint(sm) {
+        @include size(#{vwm(204.8px)});
+        margin-top: vwm(16.38px);
+      }
+    }
+
+    &__info {
+      width: 220px;
+      margin-top: 24px;
+      line-height: 1.5;
+      // text-wrap: nowrap;
+
+      @include breakpoint(xl) {
+        width: vw(220px);
+        font-size: vw(16px);
+        margin-top: vw(24px);
+      }
+
+      @include breakpoint(sm) {
+        width: vwm(587.78px);
+        font-size: vwm(32.77px);
+        margin-top: vwm(16.38px);
+      }
+    }
+  }
+
+  // web中版-1420
+  @include breakpoint(xl) {
+  }
+  // 行動裝置大版Pad-1024
+  @include breakpoint(md) {
+  }
+  // 小網-768
+  @include breakpoint(sm) {
+  }
+}
